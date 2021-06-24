@@ -16,9 +16,9 @@ public abstract class BasePage<T> {
         this.driver = driver;
     }
 
-    public HostHomesPage clickBecomeHostMenu(){
+    public HostPage clickBecomeHostMenu(){
         driver.findElement(By.className("_q730rga")).click();
-        return new HostHomesPage(driver);
+        return new HostPage(driver);
     }
 
     @SuppressWarnings("unchecked")

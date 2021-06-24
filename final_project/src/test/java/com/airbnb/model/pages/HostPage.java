@@ -1,5 +1,5 @@
 package com.airbnb.model.pages;
 
-public class HostHomesPage {
+public class HostPage {
     
 }
