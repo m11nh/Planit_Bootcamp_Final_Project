@@ -10,11 +10,6 @@ public class HomePage extends BasePage<HomePage> {
         super(driver);
     }
 
-	public HomePage clickLogin() {
-        driver.findElement(By.cssSelector("ng-login a")).click(); 
-        return this; 
-	}
-
     public HomePage setUsername(String username) {
         driver.findElement(By.id("loginUserName")).sendKeys(username);
         return this;
