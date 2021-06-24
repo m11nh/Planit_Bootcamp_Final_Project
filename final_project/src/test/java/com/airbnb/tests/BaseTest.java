@@ -22,7 +22,12 @@ public abstract class BaseTest {
         var options = new FirefoxOptions();
         this.driver = new FirefoxDriver(options); 
 
+<<<<<<< HEAD
         this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); 
+=======
+        // 2. Set implicit wait
+        this.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS); //config
+>>>>>>> 221689f6af5f6a20e724deab28480b2bcb39f1b0
 
         this.driver.manage().window().maximize();
 
@@ -42,4 +47,8 @@ public abstract class BaseTest {
             throw new RuntimeException(e);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 221689f6af5f6a20e724deab28480b2bcb39f1b0

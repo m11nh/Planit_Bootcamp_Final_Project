@@ -2,6 +2,10 @@ package com.airbnb.model.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 221689f6af5f6a20e724deab28480b2bcb39f1b0
 
 public class HomePage extends BasePage<HomePage> {
 
