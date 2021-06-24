@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 
 public class BecomeHosts extends BaseTest{
 
-    @Test
+    @Disabled
     public void validateBecomingHost(){
         var user = open(HomePage.class)
             .clickBecomeHostMenu()
