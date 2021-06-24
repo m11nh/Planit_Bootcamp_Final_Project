@@ -8,7 +8,6 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.support.ui.Sleeper;
 
 public class LoginTests extends BaseTest {
-
     @Test
     public void validateSuccessfulLogin(){
         var user = open(HomePage.class)
@@ -19,7 +18,4 @@ public class LoginTests extends BaseTest {
         .setPassword("TRYONE11@")
         .clickNotRobot();  
     }
-
-    
-    
 }

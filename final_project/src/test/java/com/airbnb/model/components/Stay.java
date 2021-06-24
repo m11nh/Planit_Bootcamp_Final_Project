@@ -35,7 +35,7 @@ public class Stay {
 	}
 
 	public StayPage click() {
-		new StayPage(parent.getDriver()); 
+		return new StayPage(parent.getDriver()); 
 	}
 
 

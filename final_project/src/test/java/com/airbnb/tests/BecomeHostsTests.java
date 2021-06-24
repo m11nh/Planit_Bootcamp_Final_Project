@@ -10,9 +10,5 @@ public class BecomeHostsTests extends BaseTest{
     public void validateBecomingHost(){
         var user = open(HomePage.class)
         .clickBecomeHostMenu();
-            
-        
-
-
     }
 }

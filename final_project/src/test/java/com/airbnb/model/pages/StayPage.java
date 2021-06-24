@@ -2,7 +2,7 @@ package com.airbnb.model.pages;
 
 import org.openqa.selenium.WebDriver;
 
-public class StayPage extends BasePage{
+public class StayPage extends BasePage<StayPage>{
 	public StayPage(WebDriver driver) {
         super(driver);
 	}
@@ -35,6 +35,12 @@ public class StayPage extends BasePage{
 
 	public PayPage clickReserve() {
 
+
 		return new PayPage(driver); 
 	}
+
+	public Short getDates() {
+		return null;
+	}
+
 }

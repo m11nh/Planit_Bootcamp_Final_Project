@@ -52,11 +52,13 @@ public class BookingTest extends BaseTest{
 			.clickSearch();
 		var stay = resultsPage.getStay(s -> s.getTitle().equals("Long Stay Special- Studio Apartment"));
 		var stayPage = stay.click();
-		stayPage.setCheckinDate(); 
-		stayPage.setCheckoutDate(); 
+		stayPage
+			.setCheckInDate(4, "jan") 
+			.setCheckOutDate(5, "feb"); 
 		var payPage = stayPage.clickReserve(); 
-		var cardModal = payPage.clickPayWithCredit()
-		cardModal.clickDone()
+		var cardModal = payPage.clickPayWithCredit();
+		cardModal.clickDone();
+
 		assertEquals(cardModal.getCardError(), "Check your card number"); 
 		assertEquals(cardModal.getPostCodeError(), "This is required"); 
 	}

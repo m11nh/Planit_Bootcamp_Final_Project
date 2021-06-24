@@ -1,8 +1,11 @@
 package com.airbnb.model.pages;
 
+import com.airbnb.model.components.dialogs.CardDialog;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class PayPage extends BasePage {
+public class PayPage extends BasePage<PayPage> {
     public PayPage(WebDriver driver) {
         super(driver);
 	}
@@ -17,5 +20,10 @@ public class PayPage extends BasePage {
 
 	public Double getTotal() {
 		return null;
+	}
+
+	public CardDialog clickPayWithCredit() {
+		var root = driver.findElement(By.className(""));
+		return new CardDialog(root, driver);
 	}
 }

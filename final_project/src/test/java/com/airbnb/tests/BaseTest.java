@@ -2,7 +2,6 @@ package com.airbnb.tests;
 
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.AfterEach;
@@ -21,31 +20,26 @@ public abstract class BaseTest {
     @BeforeEach
     public void setup() throws MalformedURLException {
         var options = new FirefoxOptions();
-        this.driver = new FirefoxDriver(options); //config
+        this.driver = new FirefoxDriver(options); 
 
-        // 2. Set implicit wait
-        this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); //config
+        this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); 
 
-        // 3. Maximize
         this.driver.manage().window().maximize();
 
-        // 4. Nav home
-        this.driver.get("https://www.airbnb.com.au/"); //config
+        this.driver.get("https://www.airbnb.com.au/"); 
     }
 
     @AfterEach
     public void shutdown() {
-        // 5. Close browser
         this.driver.quit();
     }
 
-    public <T> T open(Class<T> clazz) {
+    public <T> T open(Class<T> c) {
         try {
-            return clazz.getConstructor(WebDriver.class).newInstance(this.driver);
+            return c.getConstructor(WebDriver.class).newInstance(this.driver);
         } catch (InstantiationException | IllegalAccessException | IllegalArgumentException | InvocationTargetException
                 | NoSuchMethodException | SecurityException e) {
             throw new RuntimeException(e);
         }
     }
 }
-// foname, email, message
