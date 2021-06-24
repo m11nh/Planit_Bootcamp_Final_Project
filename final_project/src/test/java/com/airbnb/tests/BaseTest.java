@@ -2,7 +2,6 @@ package com.airbnb.tests;
 
 import java.lang.reflect.InvocationTargetException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.jupiter.api.AfterEach;
@@ -24,7 +23,7 @@ public abstract class BaseTest {
         this.driver = new FirefoxDriver(options); //config
 
         // 2. Set implicit wait
-        this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); //config
+        this.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS); //config
 
         // 3. Maximize
         this.driver.manage().window().maximize();
@@ -48,4 +47,3 @@ public abstract class BaseTest {
         }
     }
 }
-// foname, email, message
