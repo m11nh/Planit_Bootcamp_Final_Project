@@ -2,7 +2,10 @@ package com.airbnb.tests;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.airbnb.model.pages.HomePage;
+
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.support.ui.Sleeper;
 
 public class LoginTests extends BaseTest {
 
@@ -10,15 +13,13 @@ public class LoginTests extends BaseTest {
     public void validateSuccessfulLogin(){
         var user = open(HomePage.class)
         .clickLoginMenu()
-        .clickLogIn()
         .clickContinueEmailBtn()
-        .setEmail()
+        .setEmail("claudiasanabria@gmail.com")
         .clickContinueBtn()
-        .setPassword()
-        .clickLogInBtn();
-        
-        assertEquals("image", user);
+        .setPassword("TRYONE11@")
+        .clickNotRobot();  
     }
 
+    
     
 }

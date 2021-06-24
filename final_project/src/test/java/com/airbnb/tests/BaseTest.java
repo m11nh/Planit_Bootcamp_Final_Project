@@ -10,11 +10,8 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-// import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.RemoteWebDriver;
 
 @Execution(ExecutionMode.CONCURRENT)
 public abstract class BaseTest {
@@ -27,13 +24,13 @@ public abstract class BaseTest {
         this.driver = new FirefoxDriver(options); //config
 
         // 2. Set implicit wait
-        this.driver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS); //config
+        this.driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS); //config
 
         // 3. Maximize
         this.driver.manage().window().maximize();
 
         // 4. Nav home
-        this.driver.get("https://jupiter2.cloud.planittesting.com"); //config
+        this.driver.get("https://www.airbnb.com.au/"); //config
     }
 
     @AfterEach
